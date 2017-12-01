@@ -27,7 +27,8 @@ object Main extends App {
   /*
    * Solution to Day 1: http://adventofcode.com/2017/day/1
    */
-  val dayOneInput : Iterator[String] = Source.fromResource("DayOne.txt").getLines
+  val dayOneInput = Source.fromResource("DayOne.txt").getLines.mkString
   println("+++ Day One +++")
-  println("The solution to the captcha is " + DayOne.partOne(dayOneInput.mkString).toString)
+  println("The solution to the captcha is " + DayOne.partOne(dayOneInput).toString)
+  println("The solution to the new captcha is " + DayOne.partTwo(dayOneInput).toString)
 }
