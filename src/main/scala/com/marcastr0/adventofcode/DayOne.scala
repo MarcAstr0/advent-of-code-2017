@@ -2,8 +2,8 @@ package com.marcastr0.adventofcode
 
 object DayOne {
 
-  def partOne(input: Int): Int = {
-    val xs1 = input.toString.map(_.asDigit).toList
+  def partOne(input: String): Int = {
+    val xs1 = input.map(_.asDigit).toList
     val xs2 = xs1 ++ List(xs1.head)
     val xs3 = {
       for {
