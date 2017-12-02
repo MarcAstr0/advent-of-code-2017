@@ -15,4 +15,15 @@ object DayTwo {
     val xs = stringToSpreadsheet(spreadsheet) map (row => getRowDifference(row))
     xs.sum
   }
+
+  def getRowEvenDivision(row: List[Int]): Int = {
+    val pairs = row.toSet.subsets(2).toList
+    val evenlyDivisible = (pairs filter (s => s.head % s.tail.head == 0 || s.tail.head % s.head == 0)).head.toList.sorted
+    evenlyDivisible.tail.head / evenlyDivisible.head
+  }
+
+  def partTwo(spreadsheet: String): Int = {
+    val xs = stringToSpreadsheet(spreadsheet) map (row => getRowEvenDivision(row))
+    xs.sum
+  }
 }

@@ -25,4 +25,17 @@ class DayTwoSpec extends FlatSpec {
     assert(DayTwo.partOne(spreadsheet) == 18)
   }
 
+  "getRowEvenDivision" should "determine the result of the division of the two numbers that divide evenly" in {
+    assert(DayTwo.getRowEvenDivision(List(5, 9, 2, 8)) == 4)
+    assert(DayTwo.getRowEvenDivision(List(9, 4, 7, 3)) == 3)
+    assert(DayTwo.getRowEvenDivision(List(3, 8, 6, 5)) == 2)
+  }
+
+  "partTwo" should "calculate the spreadsheet's checksum" in {
+    val spreadsheet =
+      """5	9	2	8
+        |9	4	7	3
+        |3	8	6	5""".stripMargin
+    assert(DayTwo.partTwo(spreadsheet) == 9)
+  }
 }

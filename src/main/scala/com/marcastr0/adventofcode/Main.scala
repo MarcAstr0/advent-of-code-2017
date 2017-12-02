@@ -38,4 +38,5 @@ object Main extends App {
   val dayTwoInput = Source.fromResource("DayTwo.txt").getLines.mkString("\n")
   println("--- Day 2: Corruption Checksum ---")
   println("The checksum for the spreadsheet is " + DayTwo.partOne(dayTwoInput))
+  println("The sum of each row's result in the spreadsheet is " + DayTwo.partTwo(dayTwoInput))
 }
