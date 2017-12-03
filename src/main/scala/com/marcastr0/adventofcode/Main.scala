@@ -39,4 +39,11 @@ object Main extends App {
   println("--- Day 2: Corruption Checksum ---")
   println("The checksum for the spreadsheet is " + DayTwo.partOne(dayTwoInput))
   println("The sum of each row's result in the spreadsheet is " + DayTwo.partTwo(dayTwoInput))
+
+  /*
+   * Solution to Day 3: http://adventofcode.com/2017/day/3
+   */
+  println("--- Day 3: Spiral Memory ---")
+  val dayThreeInput = 289326
+  println("The number of steps required are " + DayThree.partOne(dayThreeInput))
 }
