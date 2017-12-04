@@ -30,4 +30,5 @@ object DayThree {
     Math.abs(coords._1) + Math.abs(coords._2)
   }
 
+  // @TODO: implement part 2
 }

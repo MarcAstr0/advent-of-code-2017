@@ -31,6 +31,7 @@ object Main extends App {
   println("--- Day 1: Inverse Captcha ---")
   println("The solution to the captcha is " + DayOne.partOne(dayOneInput).toString)
   println("The solution to the new captcha is " + DayOne.partTwo(dayOneInput).toString)
+  println
 
   /*
    * Solution to Day 2: http://adventofcode.com/2017/day/2
@@ -39,6 +40,7 @@ object Main extends App {
   println("--- Day 2: Corruption Checksum ---")
   println("The checksum for the spreadsheet is " + DayTwo.partOne(dayTwoInput))
   println("The sum of each row's result in the spreadsheet is " + DayTwo.partTwo(dayTwoInput))
+  println
 
   /*
    * Solution to Day 3: http://adventofcode.com/2017/day/3
@@ -46,4 +48,13 @@ object Main extends App {
   println("--- Day 3: Spiral Memory ---")
   val dayThreeInput = 289326
   println("The number of steps required are " + DayThree.partOne(dayThreeInput))
+  println
+
+  /*
+   * Solution to Day 4: http://adventofcode.com/2017/day/4
+   */
+  println("--- Day 4: High-Entropy Passphrases ---")
+  val dayFourInput = Source.fromResource("DayFour.txt").getLines.mkString("\n")
+  println("There are " + DayFour.partOne(dayFourInput) + " valid passphrases")
+  println
 }
