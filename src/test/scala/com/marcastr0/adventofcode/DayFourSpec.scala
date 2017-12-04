@@ -10,11 +10,27 @@ class DayFourSpec extends FlatSpec {
     assert(DayFour.isValidPassphrase("aa bb cc dd aaa"))
   }
 
+  "areAnagrams" should "return true if two words are anagrams" in {
+    assert(!DayFour.areAnagrams("abcde", "fghij"))
+    assert(DayFour.areAnagrams("abcde", "ecdab"))
+    assert(!DayFour.areAnagrams("a", "ab"))
+  }
+
   "partOne" should "count the valid passphrases from a list" in {
     val passphraseList =
       """aa bb cc dd ee
         |aa bb cc dd aa
         |aa bb cc dd aaa""".stripMargin
     assert(DayFour.partOne(passphraseList) == 2)
+  }
+
+  "partTwo" should "count the valid passphrases using the added system policy" in {
+    val passphraseList =
+      """abcde fghij
+        |abcde xyz ecdab
+        |a ab abc abd abf abj
+        |iiii oiii ooii oooi oooo
+        |oiii ioii iioi iiio""".stripMargin
+    assert(DayFour.partTwo(passphraseList)== 3)
   }
 }

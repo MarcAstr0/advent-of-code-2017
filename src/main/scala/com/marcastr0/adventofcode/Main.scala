@@ -56,5 +56,6 @@ object Main extends App {
   println("--- Day 4: High-Entropy Passphrases ---")
   val dayFourInput = Source.fromResource("DayFour.txt").getLines.mkString("\n")
   println("There are " + DayFour.partOne(dayFourInput) + " valid passphrases")
+  println("There are " + DayFour.partTwo(dayFourInput) + " valid passphrases with the added security")
   println
 }
