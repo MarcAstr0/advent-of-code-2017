@@ -25,7 +25,7 @@ object Main extends App {
   println(christmasTree)
 
   /*
-   * Solution to Day 1: http://adventofcode.com/2017/day/1
+   * Solution for Day 1: http://adventofcode.com/2017/day/1
    */
   val dayOneInput = Source.fromResource("DayOne.txt").getLines.mkString
   println("--- Day 1: Inverse Captcha ---")
@@ -34,7 +34,7 @@ object Main extends App {
   println
 
   /*
-   * Solution to Day 2: http://adventofcode.com/2017/day/2
+   * Solution for Day 2: http://adventofcode.com/2017/day/2
    */
   val dayTwoInput = Source.fromResource("DayTwo.txt").getLines.mkString("\n")
   println("--- Day 2: Corruption Checksum ---")
@@ -43,7 +43,7 @@ object Main extends App {
   println
 
   /*
-   * Solution to Day 3: http://adventofcode.com/2017/day/3
+   * Solution for Day 3: http://adventofcode.com/2017/day/3
    */
   println("--- Day 3: Spiral Memory ---")
   val dayThreeInput = 289326
@@ -51,11 +51,19 @@ object Main extends App {
   println
 
   /*
-   * Solution to Day 4: http://adventofcode.com/2017/day/4
+   * Solution for Day 4: http://adventofcode.com/2017/day/4
    */
   println("--- Day 4: High-Entropy Passphrases ---")
   val dayFourInput = Source.fromResource("DayFour.txt").getLines.mkString("\n")
   println("There are " + DayFour.partOne(dayFourInput) + " valid passphrases")
   println("There are " + DayFour.partTwo(dayFourInput) + " valid passphrases with the added security")
+  println
+
+  /*
+   * Solution for Day 5: http://adventofcode.com/2017/day/5
+   */
+  println("--- Day 5: A Maze of Twisty Trampolines, All Alike ---")
+  val dayFiveInput = Source.fromResource("DayFive.txt").getLines.mkString("\n")
+  println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
   println
 }
