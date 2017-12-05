@@ -14,4 +14,14 @@ class DayFiveSpec extends FlatSpec {
     assert(DayFive.partOne(offsets) == 5)
   }
 
+  "partTwo" should "return the number of steps needed to reach the exit" in {
+    val offsets =
+      """0
+        |3
+        |0
+        |1
+        |-3""".stripMargin
+    assert(DayFive.partTwo(offsets) == 10)
+  }
+
 }
