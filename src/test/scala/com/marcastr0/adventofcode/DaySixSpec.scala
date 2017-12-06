@@ -16,4 +16,7 @@ class DaySixSpec extends FlatSpec {
     assert(DaySix.partOne("0	2	7	0") == 5)
   }
 
+  "partTwo" should "return the size of the infinite loop" in {
+    assert(DaySix.partTwo("0	2	7	0") == 4)
+  }
 }

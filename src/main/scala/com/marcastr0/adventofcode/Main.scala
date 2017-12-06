@@ -74,5 +74,6 @@ object Main extends App {
   println("--- Day 6: Memory Reallocation ---")
   val daySixInput = "0	5	10	0	11	14	13	4	11	8	8	7	1	4	12	11"
   println(DaySix.partOne(daySixInput) + " distribution cycles must be completed before entering an infinite loop")
+  println("There are " + DaySix.partTwo(daySixInput) + " cycles in the infinite loop")
   println
 }

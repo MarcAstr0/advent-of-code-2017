@@ -28,4 +28,15 @@ object DaySix {
     cycles.length
   }
 
+  def partTwo(banks: String): Int = {
+    val initial = banks.split("\t").toList map(_.toInt)
+    var cycle = redistribute(initial)
+    val cycles = ListBuffer(initial)
+    while (!cycles.contains(cycle)) {
+      cycles += cycle
+      cycle = redistribute(cycle)
+    }
+    cycles.length - cycles.indexOf(cycle)
+  }
+
 }
