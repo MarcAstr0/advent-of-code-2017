@@ -67,4 +67,12 @@ object Main extends App {
   println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
   println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
   println
+
+  /*
+   * Solution for Day 6: http://adventofcode.com/2017/day/6
+   */
+  println("--- Day 6: Memory Reallocation ---")
+  val daySixInput = "0	5	10	0	11	14	13	4	11	8	8	7	1	4	12	11"
+  println(DaySix.partOne(daySixInput) + " distribution cycles must be completed before entering an infinite loop")
+  println
 }
