@@ -64,8 +64,8 @@ object Main extends App {
    */
   println("--- Day 5: A Maze of Twisty Trampolines, All Alike ---")
   val dayFiveInput = Source.fromResource("DayFive.txt").getLines.mkString("\n")
-  println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
-  println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
+  //println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
+  //println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
   println
 
   /*
@@ -75,5 +75,13 @@ object Main extends App {
   val daySixInput = "0	5	10	0	11	14	13	4	11	8	8	7	1	4	12	11"
   println(DaySix.partOne(daySixInput) + " distribution cycles must be completed before entering an infinite loop")
   println("There are " + DaySix.partTwo(daySixInput) + " cycles in the infinite loop")
+  println
+
+  /*
+   * Solution for Day 7: http://adventofcode.com/2017/day/7
+   */
+  println("--- Day 7: Recursive Circus ---")
+  val daySevenInput = Source.fromResource("DaySeven.txt").getLines.mkString("\n")
+  println("The bottom program is " + DaySeven.partOne(daySevenInput))
   println
 }
