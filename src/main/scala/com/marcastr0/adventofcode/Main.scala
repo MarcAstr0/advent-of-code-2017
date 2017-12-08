@@ -82,7 +82,7 @@ object Main extends App {
    */
   println("--- Day 7: Recursive Circus ---")
   val daySevenInput = Source.fromResource("DaySeven.txt").getLines.mkString("\n")
-  // @TODO: Finish Day Seven
+  println("The name of the bottom program is " + DaySeven.partOne(daySevenInput))
   println
 
   /*
