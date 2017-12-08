@@ -64,8 +64,8 @@ object Main extends App {
    */
   println("--- Day 5: A Maze of Twisty Trampolines, All Alike ---")
   val dayFiveInput = Source.fromResource("DayFive.txt").getLines.mkString("\n")
-  //println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
-  //println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
+  println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
+  println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
   println
 
   /*
@@ -91,5 +91,6 @@ object Main extends App {
   println("--- Day 8: I Heard You Like Registers ---")
   val dayEightInput = Source.fromResource("DayEight.txt").getLines.mkString("\n")
   println("The largest value in any register after completing the instructions is " + DayEight.partOne(dayEightInput))
+  println("The highest value held in any register during the process is " + DayEight.partTwo(dayEightInput))
   println
 }

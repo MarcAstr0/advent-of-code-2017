@@ -21,4 +21,13 @@ class DayEightSpec extends FlatSpec {
         |c inc -20 if c == 10""".stripMargin
     assert(DayEight.partOne(input) == 1)
   }
+
+  "partTwo" should "return the highest value held in any register during the process" in {
+    val input =
+      """b inc 5 if a > 1
+        |a inc 1 if b < 5
+        |c dec -10 if a >= 1
+        |c inc -20 if c == 10""".stripMargin
+    assert(DayEight.partTwo(input) == 10)
+  }
 }

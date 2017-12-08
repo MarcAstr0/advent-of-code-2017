@@ -28,4 +28,29 @@ object DayEight {
     }
     registers.toSeq.sortWith(_._2 > _._2).head._2
   }
+
+  def partTwo(input: String): Int = {
+    val registers = getRegisters(input)
+    val instructions = input.split("\n").toList map (_.split(" ").toList)
+    var max = 0
+    for (i <- instructions) {
+      i match {
+        case List(x, "inc", v, "if", y, "<", w) => if (registers(y) < w.toInt) registers(x) += v.toInt
+        case List(x, "inc", v, "if", y, ">", w) => if (registers(y) > w.toInt) registers(x) += v.toInt
+        case List(x, "inc", v, "if", y, "<=", w) => if (registers(y) <= w.toInt) registers(x) += v.toInt
+        case List(x, "inc", v, "if", y, ">=", w) => if (registers(y) >= w.toInt) registers(x) += v.toInt
+        case List(x, "inc", v, "if", y, "==", w) => if (registers(y) == w.toInt) registers(x) += v.toInt
+        case List(x, "inc", v, "if", y, "!=", w) => if (registers(y) != w.toInt) registers(x) += v.toInt
+        case List(x, "dec", v, "if", y, "<", w) => if (registers(y) < w.toInt) registers(x) -= v.toInt
+        case List(x, "dec", v, "if", y, ">", w) => if (registers(y) > w.toInt) registers(x) -= v.toInt
+        case List(x, "dec", v, "if", y, "<=", w) => if (registers(y) <= w.toInt) registers(x) -= v.toInt
+        case List(x, "dec", v, "if", y, ">=", w) => if (registers(y) >= w.toInt) registers(x) -= v.toInt
+        case List(x, "dec", v, "if", y, "==", w) => if (registers(y) == w.toInt) registers(x) -= v.toInt
+        case List(x, "dec", v, "if", y, "!=", w) => if (registers(y) != w.toInt) registers(x) -= v.toInt
+      }
+      val currentMax = registers.toSeq.sortWith(_._2 > _._2).head._2
+      if (currentMax > max) max = currentMax
+    }
+    max
+  }
 }
