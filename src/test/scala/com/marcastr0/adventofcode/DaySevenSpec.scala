@@ -14,7 +14,7 @@ class DaySevenSpec extends FlatSpec {
       "qoyq" -> (66, List())))
   }
 
-  "partOne" should "return the name of the bottom program" in {
+  "partOne" should "return the name of the bottom program" ignore {
     ???
   }
 

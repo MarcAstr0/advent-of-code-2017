@@ -82,6 +82,14 @@ object Main extends App {
    */
   println("--- Day 7: Recursive Circus ---")
   val daySevenInput = Source.fromResource("DaySeven.txt").getLines.mkString("\n")
-  println("The bottom program is " + DaySeven.partOne(daySevenInput))
+  // @TODO: Finish Day Seven
+  println
+
+  /*
+   * Solution for Day 8: http://adventofcode.com/2017/day/8
+   */
+  println("--- Day 8: I Heard You Like Registers ---")
+  val dayEightInput = Source.fromResource("DayEight.txt").getLines.mkString("\n")
+  println("The largest value in any register after completing the instructions is " + DayEight.partOne(dayEightInput))
   println
 }
