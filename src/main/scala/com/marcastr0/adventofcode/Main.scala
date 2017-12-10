@@ -102,4 +102,11 @@ object Main extends App {
   val dayNineInput = Source.fromResource("DayNine.txt").getLines.mkString
   println("The total score for all groups in the input is " + DayNine.partOne(dayNineInput))
   println("The total of non-canceled characters that are within the garbage are " + DayNine.partTwo(dayNineInput))
+
+  /*
+   * Solution for Day 10:
+   */
+  println("--- Day 10: Knot Hash ---")
+  val dayTenInput = "106,16,254,226,55,2,1,166,177,247,93,0,255,228,60,36"
+  println("The result of multiplying the first two numbers in the list after applying the hashes is " + DayTen.partOne(256, dayTenInput))
 }
