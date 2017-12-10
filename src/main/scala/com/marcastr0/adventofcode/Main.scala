@@ -94,4 +94,11 @@ object Main extends App {
   println("The largest value in any register after completing the instructions is " + DayEight.partOne(dayEightInput))
   println("The highest value held in any register during the process is " + DayEight.partTwo(dayEightInput))
   println
+
+  /*
+   * Solution for Day 9: http://adventofcode.com/2017/day/9
+   */
+  println("--- Day 9: Stream Processing ---")
+  val dayNineInput = Source.fromResource("DayNine.txt").getLines.mkString
+  println("The total score for all groups in the input is " + DayNine.partOne(dayNineInput))
 }
