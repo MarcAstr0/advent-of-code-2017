@@ -23,4 +23,20 @@ object DayNine {
     }
     score
   }
+
+  def partTwo(input: String): Int = {
+    val tokens = input.toList
+    var i, garbageCount = 0
+    var garbage = false
+    while (i < tokens.length) {
+      tokens(i) match {
+        case '<' => if (!garbage) garbage = true else garbageCount += 1
+        case '>' => if (garbage) garbage = false
+        case '!' => i += 1
+        case _ => if (garbage) garbageCount += 1
+      }
+      i += 1
+    }
+    garbageCount
+  }
 }

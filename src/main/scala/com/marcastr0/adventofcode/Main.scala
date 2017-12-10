@@ -101,4 +101,5 @@ object Main extends App {
   println("--- Day 9: Stream Processing ---")
   val dayNineInput = Source.fromResource("DayNine.txt").getLines.mkString
   println("The total score for all groups in the input is " + DayNine.partOne(dayNineInput))
+  println("The total of non-canceled characters that are within the garbage are " + DayNine.partTwo(dayNineInput))
 }

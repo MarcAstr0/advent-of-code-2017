@@ -14,4 +14,14 @@ class DayNineSpec extends FlatSpec {
     assert(DayNine.partOne("{{<!!>},{<!!>},{<!!>},{<!!>}}") == 9)
     assert(DayNine.partOne("{{<a!>},{<a!>},{<a!>},{<ab>}}") == 3)
   }
+
+  "partTwo" should "return the number of non-canceled characters that are within the garbage" in {
+    assert(DayNine.partTwo("<>") == 0)
+    assert(DayNine.partTwo("<random characters>") == 17)
+    assert(DayNine.partTwo("<<<<>") == 3)
+    assert(DayNine.partTwo("<{!>}>") == 2)
+    assert(DayNine.partTwo("<!!>") == 0)
+    assert(DayNine.partTwo("<!!!>>") == 0)
+    assert(DayNine.partTwo("<{o\"i!a,<{i<a>") == 10)
+  }
 }
