@@ -64,8 +64,8 @@ object Main extends App {
    */
   println("--- Day 5: A Maze of Twisty Trampolines, All Alike ---")
   val dayFiveInput = Source.fromResource("DayFive.txt").getLines.mkString("\n")
-  //println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
-  //println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
+  println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
+  println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
   println
 
   /*
@@ -120,5 +120,13 @@ object Main extends App {
   val dayElevenInput = Source.fromResource("DayEleven.txt").getLines.mkString
   println("The fewest number of steps required are " + DayEleven.partOne(dayElevenInput))
   println("The furthest number of steps he ever got was " + DayEleven.partTwo(dayElevenInput))
+  println
+
+  /*
+   * Solution for Day 12: http://adventofcode.com/2017/day/12
+   */
+  println("--- Day 12: Digital Plumber ---")
+  val dayTwelveInput = Source.fromResource("DayTwelve.txt").getLines.mkString("\n")
+  println("The number of programs in the group that contain program ID 0 is " + DayTwelve.partOne(dayTwelveInput))
   println
 }
