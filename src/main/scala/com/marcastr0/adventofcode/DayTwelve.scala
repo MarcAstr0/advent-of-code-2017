@@ -18,9 +18,27 @@ object DayTwelve {
     dfsRec(start, List()).reverse
   }
 
-  def partOne(list: String): Int = {
-    val programs = list.split("\n").toList map (_.split(" <-> ").toList) map (x => (x.head.toInt, x.tail.head.split(",").toList.map(_.trim.toInt)))
-    dfs(0, programs.toMap).length
+  def stringToGraph(input: String): Map[Int, List[Int]] = {
+    input.split("\n").toList.
+      map (_.split(" <-> ").toList).
+      map (x => (x.head.toInt, x.tail.head.split(",").toList.
+        map(_.trim.toInt))).toMap
   }
 
+  def partOne(list: String): Int = {
+    val graph = stringToGraph(list)
+    dfs(0, graph).length
+  }
+
+  def partTwo(list: String): Int = {
+    val graph = stringToGraph(list)
+    var groups = collection.mutable.ListBuffer[List[Int]]()
+    val allPrograms = graph.keys.toList
+    var i = 0
+    while (groups.flatten.length < allPrograms.length) {
+      while (groups.flatten.contains(allPrograms(i))) i += 1
+      groups += dfs(allPrograms(i), graph)
+    }
+    groups.length
+  }
 }

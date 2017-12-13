@@ -128,5 +128,6 @@ object Main extends App {
   println("--- Day 12: Digital Plumber ---")
   val dayTwelveInput = Source.fromResource("DayTwelve.txt").getLines.mkString("\n")
   println("The number of programs in the group that contain program ID 0 is " + DayTwelve.partOne(dayTwelveInput))
+  println("The are " + DayTwelve.partTwo(dayTwelveInput) + " groups")
   println
 }
