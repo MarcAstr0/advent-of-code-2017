@@ -130,4 +130,27 @@ object Main extends App {
   println("The number of programs in the group that contain program ID 0 is " + DayTwelve.partOne(dayTwelveInput))
   println("The are " + DayTwelve.partTwo(dayTwelveInput) + " groups")
   println
+
+  /*
+   * Solution for Day 13: http://adventofcode.com/2017/day/13
+   */
+  // @TODO: Find solution for Day 13
+
+  /*
+   * Solution for Day 14: http://adventofcode.com/2017/day/14
+   */
+  // @TODO: Find solution for Day 14
+
+  /*
+   * Solution for Day 14: http://adventofcode.com/2017/day/15
+   */
+  println("--- Day 15: Dueling Generators ---")
+  val startA = 591
+  val startB = 393
+  val factorA = 16807
+  val factorB = 48271
+  val iterations = 40000000
+  val divisor = 2147483647
+  println("The judge's final count is " + DayFifteen.partOne(startA, startB, factorA, factorB, divisor, iterations))
+  println
 }
