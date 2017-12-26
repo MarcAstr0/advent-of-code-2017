@@ -23,4 +23,17 @@ class DayFifteenSpec extends FlatSpec {
   "partOne" should "return the number of matches" in {
     assert(DayFifteen.partOne(65, 8921, 16807, 48271, 2147483647, 5) == 1)
   }
+
+  "generateValues" should "generate a list of values for the generators" in {
+    assert(DayFifteen.generateValues(65, 16807, 2147483647, 4, 5) == List(
+      1352636452:BigInt, 1992081072:BigInt, 530830436:BigInt, 1980017072:BigInt, 740335192:BigInt
+    ))
+    assert(DayFifteen.generateValues(8921, 48271, 2147483647, 8, 5) == List(
+      1233683848:BigInt, 862516352:BigInt, 1159784568:BigInt, 1616057672:BigInt, 412269392:BigInt
+    ))
+  }
+
+  "partTwo" should "return the number of matches" in {
+    assert(DayFifteen.partTwo(65, 8921, 16807, 48271, 4, 8, 2147483647, 5) == 0)
+  }
 }

@@ -64,8 +64,8 @@ object Main extends App {
    */
   println("--- Day 5: A Maze of Twisty Trampolines, All Alike ---")
   val dayFiveInput = Source.fromResource("DayFive.txt").getLines.mkString("\n")
-  println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
-  println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
+  //println("It takes " + DayFive.partOne(dayFiveInput) + " steps to reach the exit")
+  //println("It takes " + DayFive.partTwo(dayFiveInput) + " steps to reach the exit with the new rule")
   println
 
   /*
@@ -142,7 +142,7 @@ object Main extends App {
   // @TODO: Find solution for Day 14
 
   /*
-   * Solution for Day 14: http://adventofcode.com/2017/day/15
+   * Solution for Day 15: http://adventofcode.com/2017/day/15
    */
   println("--- Day 15: Dueling Generators ---")
   val startA = 591
@@ -151,6 +151,25 @@ object Main extends App {
   val factorB = 48271
   val iterations = 40000000
   val divisor = 2147483647
-  println("The judge's final count is " + DayFifteen.partOne(startA, startB, factorA, factorB, divisor, iterations))
+  //println("The judge's final count is " + DayFifteen.partOne(startA, startB, factorA, factorB, divisor, iterations))
+  //println("The judge's new final count is " + DayFifteen.partTwo(startA, startB, factorA, factorB, 4, 8, divisor, 5000000))
+  println
+
+  /*
+   * Solution for Day 16: http://adventofcode.com/2017/day/16
+   */
+  // @TODO: Find solution for Day 16
+
+  /*
+   * Solution for Day 17: http://adventofcode.com/2017/day/17
+   */
+  // @TODO: Find solution for Day 17
+
+  /*
+   * Solution for Day 18: http://adventofcode.com/2017/day/18
+   */
+  println("--- Day 18: Duet ---")
+  val dayEighteenInput = Source.fromResource("DayEighteen.txt").getLines.mkString("\n")
+  println("The value of the recovered frequency is " + DayEighteen.partOne(dayEighteenInput))
   println
 }
