@@ -168,7 +168,10 @@ object Main extends App {
   /*
    * Solution for Day 17: http://adventofcode.com/2017/day/17
    */
-  // @TODO: Find solution for Day 17
+  println("--- Day 17: Spinlock ---")
+  val daySeventeenInput = 363
+  println("The value after 2017 in the completed circular buffer is " + DaySeventeen.partOne(daySeventeenInput, 2017))
+  println
 
   /*
    * Solution for Day 18: http://adventofcode.com/2017/day/18
