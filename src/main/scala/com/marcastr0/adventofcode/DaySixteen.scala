@@ -29,4 +29,16 @@ object DaySixteen {
     }
     partOneRec(moves.split(",").toList, programs).mkString
   }
+
+  def partTwo(moves: String, programs: String): String = {
+    var p = programs
+    var i = 1
+    while (i <= 1000000000) {
+      p = partOne(moves, p.split("").toList.map(_.head))
+      if (p == programs)
+        i += (Math.floor(1000000000/(i+1))-1).toInt * (i+1)
+      else i += 1
+    }
+    p
+  }
 }

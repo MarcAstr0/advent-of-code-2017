@@ -162,6 +162,7 @@ object Main extends App {
   val daySixteenInput = Source.fromResource("DaySixteen.txt").getLines.mkString
   val programs = List('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p')
   println("The order of the programs after the dance is " + DaySixteen.partOne(daySixteenInput, programs))
+  println("The order of the programs after 1 billion dances is " + DaySixteen.partTwo(daySixteenInput, "abcdefghijklmnop"))
   println
 
   /*
