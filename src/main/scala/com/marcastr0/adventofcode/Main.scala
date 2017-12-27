@@ -158,7 +158,11 @@ object Main extends App {
   /*
    * Solution for Day 16: http://adventofcode.com/2017/day/16
    */
-  // @TODO: Find solution for Day 16
+  println("--- Day 16: Permutation Promenade ---")
+  val daySixteenInput = Source.fromResource("DaySixteen.txt").getLines.mkString
+  val programs = List('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p')
+  println("The order of the programs after the dance is " + DaySixteen.partOne(daySixteenInput, programs))
+  println
 
   /*
    * Solution for Day 17: http://adventofcode.com/2017/day/17
