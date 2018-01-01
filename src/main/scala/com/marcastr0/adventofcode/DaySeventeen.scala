@@ -1,9 +1,12 @@
 package com.marcastr0.adventofcode
 
+import scala.annotation.tailrec
+
 object DaySeventeen {
 
   def partOne(steps: Int, insertions: Int): Int = {
 
+    @tailrec
     def partOneRec(iteration: Int, position: Int, buffer: List[Int]): List[Int] = {
       if (iteration > insertions) buffer
       else {

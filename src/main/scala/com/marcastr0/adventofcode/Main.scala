@@ -134,7 +134,10 @@ object Main extends App {
   /*
    * Solution for Day 13: http://adventofcode.com/2017/day/13
    */
-  // @TODO: Find solution for Day 13
+  println("--- Day 13: Packet Scanners ---")
+  val dayThirteenInput = Source.fromResource("DayThirteen.txt").getLines.mkString("\n")
+  println("The severity of the whole trip is " + DayThirteen.partOne(dayThirteenInput))
+  println
 
   /*
    * Solution for Day 14: http://adventofcode.com/2017/day/14
