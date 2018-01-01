@@ -184,4 +184,12 @@ object Main extends App {
   val dayEighteenInput = Source.fromResource("DayEighteen.txt").getLines.mkString("\n")
   println("The value of the recovered frequency is " + DayEighteen.partOne(dayEighteenInput))
   println
+
+  /*
+   * Solution for Day 19: http://adventofcode.com/2017/day/18
+   */
+  println("--- Day 19: A Series of Tubes ---")
+  val dayNineteenInput = Source.fromResource("DayNineteen.txt").getLines.mkString("\n")
+  println("The letters the packet will see are " + DayNineteen.partOne(dayNineteenInput))
+  println
 }
