@@ -137,6 +137,7 @@ object Main extends App {
   println("--- Day 13: Packet Scanners ---")
   val dayThirteenInput = Source.fromResource("DayThirteen.txt").getLines.mkString("\n")
   println("The severity of the whole trip is " + DayThirteen.partOne(dayThirteenInput))
+  println("The fewest number of picoseconds needed to delay are " + DayThirteen.partTwo(dayThirteenInput))
   println
 
   /*

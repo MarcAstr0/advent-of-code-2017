@@ -12,4 +12,13 @@ class DayThirteenSpec extends FlatSpec {
         |6: 4""".stripMargin
     assert(DayThirteen.partOne(firewall) == 24)
   }
+
+  "partTwo" should "return the fewest number of picoseconds needed to delay" in {
+    val firewall =
+      """0: 3
+        |1: 2
+        |4: 4
+        |6: 4""".stripMargin
+    assert(DayThirteen.partTwo(firewall) == 10)
+  }
 }

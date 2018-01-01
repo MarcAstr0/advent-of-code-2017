@@ -6,14 +6,20 @@ object DayThirteen {
     val firewall = input.split("\n").toList
       .map(_.split(": ").toList.map(_.toInt))
       .map(x => x.head -> x.tail.head).toMap
-    var severity = 0
-    for (depth <- 1 to firewall.keys.max) {
-      val range = firewall.getOrElse(depth, 0)
-      if (range > 0) {
-        if (depth % (2*(range-1)) == 0) severity += (depth * range)
-      }
-    }
-    severity
+    firewall.filter{case (depth, range) =>depth % (2*(range-1)) == 0}
+      .map{case (depth, range) => depth*range}.toList.sum
   }
 
+  def partTwo(input: String): Int = {
+    val firewall = input.split("\n").toList
+      .map(_.split(": ").toList.map(_.toInt))
+      .map(x => x.head -> x.tail.head).toMap
+    var delay = 0
+    var break = false
+    while(!break) {
+      val caught = firewall.filter{case (depth, range) => (depth + delay) % (2*(range-1)) == 0}
+      if (caught.isEmpty) break = true else delay += 1
+    }
+    delay
+  }
 }
