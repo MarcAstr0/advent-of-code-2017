@@ -39,4 +39,15 @@ class DayNineteenSpec extends FlatSpec {
         #     +B-+  +--+""".stripMargin('#')
     assert(DayNineteen.partOne(routingDiagram) == "ABCDEF")
   }
+
+  "partTwo" should "return the number of steps the packet needs to go" in {
+    val routingDiagram =
+      """     |
+        #     |  +--+
+        #     A  |  C
+        # F---|----E|--+
+        #     |  |  |  D
+        #     +B-+  +--+""".stripMargin('#')
+    assert(DayNineteen.partTwo(routingDiagram) == 38)
+  }
 }

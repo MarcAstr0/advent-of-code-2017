@@ -191,5 +191,6 @@ object Main extends App {
   println("--- Day 19: A Series of Tubes ---")
   val dayNineteenInput = Source.fromResource("DayNineteen.txt").getLines.mkString("\n")
   println("The letters the packet will see are " + DayNineteen.partOne(dayNineteenInput))
+  println("The number of steps the packet needs to go are " + DayNineteen.partTwo(dayNineteenInput))
   println
 }

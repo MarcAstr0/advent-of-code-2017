@@ -49,4 +49,27 @@ object DayNineteen {
     }
     path.mkString
   }
+
+  def partTwo(routingDiagram: String): Int = {
+    val diagram = convertRoutingDiagram(routingDiagram)
+    var direction = "down"
+    var position = (0, diagram.head.indexOf("|"))
+    var steps = 0
+    while(diagram(position._1)(position._2) != " ") {
+      direction match {
+        case "down" => position = (position._1 + 1, position._2)
+        case "left" => position = (position._1, position._2 - 1)
+        case "right" => position = (position._1, position._2 + 1)
+        case "up" => position = (position._1 - 1, position._2)
+      }
+      if (!isPathChar(diagram(position._1)(position._2)) && diagram(position._1)(position._2) != " ") {
+        steps += 1
+      }
+      else {
+        steps += 1
+        direction = changeDirection(diagram, position, direction)
+      }
+    }
+    steps
+  }
 }
