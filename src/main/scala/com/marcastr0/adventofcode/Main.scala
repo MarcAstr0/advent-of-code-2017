@@ -110,7 +110,7 @@ object Main extends App {
   println("--- Day 10: Knot Hash ---")
   val dayTenInput = "106,16,254,226,55,2,1,166,177,247,93,0,255,228,60,36"
   println("The result of multiplying the first two numbers in the list after applying the hashes is " + DayTen.partOne(256, dayTenInput))
-  // @TODO: Part 2 of Day 10
+  println("The Knot Hash of the input is " + DayTen.partTwo(dayTenInput))
   println
 
   /*
