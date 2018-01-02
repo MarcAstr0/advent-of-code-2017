@@ -143,7 +143,10 @@ object Main extends App {
   /*
    * Solution for Day 14: http://adventofcode.com/2017/day/14
    */
-  // @TODO: Find solution for Day 14
+  println("--- Day 14: Disk Defragmentation ---")
+  val dayFourteenInput = "stpzcrnm"
+  println(DayFourteen.partOne(dayFourteenInput) + " squares are used")
+  println
 
   /*
    * Solution for Day 15: http://adventofcode.com/2017/day/15
