@@ -178,6 +178,7 @@ object Main extends App {
   println("--- Day 17: Spinlock ---")
   val daySeventeenInput = 363
   println("The value after 2017 in the completed circular buffer is " + DaySeventeen.partOne(daySeventeenInput, 2017))
+  println("The value after 0 the moment 50000000 is inserted is " + DaySeventeen.partTwo(daySeventeenInput, 50000000))
   println
 
   /*

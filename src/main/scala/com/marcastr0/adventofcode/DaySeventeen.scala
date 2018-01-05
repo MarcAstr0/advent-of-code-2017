@@ -18,4 +18,14 @@ object DaySeventeen {
     val b = partOneRec(0, 0, List(0))
     b(b.indexOf(insertions) + 1)
   }
+
+  def partTwo(steps: Int, iterations: Int): Int = {
+    var i = 0
+    var afterZero = 0
+    for (iteration <- 1 to iterations) {
+      i = (i + steps)%iteration + 1
+      if (i == 1) afterZero = iteration
+    }
+    afterZero
+  }
 }
