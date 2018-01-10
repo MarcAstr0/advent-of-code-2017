@@ -197,4 +197,18 @@ object Main extends App {
   println("The letters the packet will see are " + DayNineteen.partOne(dayNineteenInput))
   println("The number of steps the packet needs to go are " + DayNineteen.partTwo(dayNineteenInput))
   println
+
+  /*
+   * Solution for Day 21: http://adventofcode.com/2017/day/21
+   */
+  println("--- Day 21: Fractal Art ---")
+  val dayTwentyOneInput = Source.fromResource("DayTwentyOne.txt").getLines.toList
+  val image =
+    """.#.
+      |..#
+      |###""".stripMargin
+  println("The number of pixels that stay on after 5 iterations are " + DayTwentyOne.partOne(dayTwentyOneInput, 5, image))
+  //println("The number of pixels that stay on after 18 iterations are " + DayTwentyOne.partOne(dayTwentyOneInput, 18, image))
+  // @TODO: Part 2 takes forever, must fix
+  println
 }
